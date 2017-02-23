@@ -21,6 +21,7 @@
 #import "PossibleInteractionController.h"
 #import "ManipulationAnalyser.h"
 #import "NSString+MD5.h"
+#import "BDSSpeechSynthesizer.h"
 
 @interface ManipulationViewController ()<ManipulationViewDelegate> {
     NSString *chapterTitle;
@@ -302,6 +303,18 @@ BOOL wasPathFollowed = false;
             }
         }
     }
+    
+    ////////////////////////////TTS/////////////////////////
+    
+    [[BDSSpeechSynthesizer sharedInstance] setSynthesizerDelegate: self];
+    [self configureOnlineTTS];
+    
+    [[BDSSpeechSynthesizer sharedInstance] setSynthesizerParam:[NSNumber numberWithFloat:10.0]
+                                                        forKey: BDS_SYNTHESIZER_PARAM_ONLINE_REQUEST_TIMEOUT ];
+    NSError* speakerr;
+    
+  [[BDSSpeechSynthesizer sharedInstance] speakSentence: @"农夫马里奥召集了所有的动物。他打开了牛的栅栏，牛走向了围栏。然后, 马里奥打开了山羊的栅栏，山羊走向了牛。小鸡从屋顶上飞了下来，坐在了牛的背上。" withError:&speakerr];
+    
 }
 
 //Custom back button to confirm navigation to library page
@@ -365,11 +378,9 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     currentGroupings = [[NSMutableDictionary alloc] init];
     
     //Perform setup of setentences for page
-    [sc setupSentencesForPage];
-    
+   // [sc setupSentencesForPage];
     isAudioLeft = false;
-    
-    [self playCurrentSentenceAudio];
+  //  [self playCurrentSentenceAudio];
     
     //Perform setup of areas and paths for page
     [self drawAreasForPage];
@@ -4376,4 +4387,49 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     return [model wordMapping];
 }
 
+
+//////////////////////Baidu TTS////////////////////////////////
+-(void)configureOnlineTTS{
+
+    [[BDSSpeechSynthesizer sharedInstance] setApiKey:@"N0xhGEV647Coa1W5ywixKKZl" withSecretKey:@"09ff49a674941878f212f2531e2eb4fb"];
+}
+
+/*
+-(void)configureOfflineTTS{
+    NSString* offlineEngineSpeechData = [[NSBundle mainBundle] pathForResource:@"Chinese_Speech_Female" ofType:@"dat"];
+    NSString* offlineEngineTextData = [[NSBundle mainBundle] pathForResource:@"Chinese_Text" ofType:@"dat"];
+    NSString* offlineEngineEnglishSpeechData = [[NSBundle mainBundle] pathForResource:@"English_Speech_Female" ofType:@"dat"];
+    NSString* offlineEngineEnglishTextData = [[NSBundle mainBundle] pathForResource:@"English_Text" ofType:@"dat"];
+    NSString* offlineEngineLicenseFile = [[NSBundle mainBundle] pathForResource:@"offline_engine_tmp_license" ofType:@"dat"];
+//#error "set offline engine license"
+    NSError* err = [[BDSSpeechSynthesizer sharedInstance] loadOfflineEngine:offlineEngineTextData speechDataPath:offlineEngineSpeechData licenseFilePath:offlineEngineLicenseFile withAppCode:nil];
+    if(err){
+        [self displayError:err withTitle:@"Offline TTS init failed"];
+        return;
+    }
+    [TTSConfigViewController setCurrentOfflineSpeaker:OfflineSpeaker_Female];
+    err = [[BDSSpeechSynthesizer sharedInstance] loadEnglishDataForOfflineEngine:offlineEngineEnglishTextData speechData:offlineEngineEnglishSpeechData];
+    if(err){
+        [self displayError:err withTitle:@"Offline TTS load English support failed"];
+        return;
+    }
+}
+
+-(void)updateSynthProgress{
+    [self.SynthesizeTextProgressView setText:nil];
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] init];
+    if(displayAllSentences){
+        for(NSDictionary* contentDict in self.synthesisTexts){
+            [str appendAttributedString:[contentDict objectForKey:@"TEXT"]];
+        }
+    }
+    else{
+        if(self.synthesisTexts.count > 0){
+            NSDictionary* contentDict = [self.synthesisTexts objectAtIndex:0];
+            [str appendAttributedString:[contentDict objectForKey:@"TEXT"]];
+        }
+    }
+    [self.SynthesizeTextProgressView setAttributedText:str];
+}
+*/
 @end

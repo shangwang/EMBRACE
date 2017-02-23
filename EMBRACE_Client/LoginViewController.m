@@ -41,6 +41,7 @@ NSString* const DROPBOX_PASSWORD_LOCKED = @"goodbye"; //used to set locked books
     NSString *studyDay = [studyDayField text];
     NSString *experimenterName = [experimenterField text];
     
+    /*
     //When student logs in, check that all fields were entered; if they didn't, provide an error message
     if ([schoolCode isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc]
@@ -81,6 +82,9 @@ NSString* const DROPBOX_PASSWORD_LOCKED = @"goodbye"; //used to set locked books
                               otherButtonTitles:nil];
         
         [alert show];
+    }*/
+    if(NO){
+        
     }
     else {
         //If they did, then check to see if the student already exists.

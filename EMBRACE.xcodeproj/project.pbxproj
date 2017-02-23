@@ -1229,6 +1229,28 @@
 		31AA5FAA175FB16500E9A9B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AA5FA9175FB16500E9A9B3 /* LoginViewController.m */; };
 		31C306C2183D900B0043DEDD /* Solution.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C306C1183D900B0043DEDD /* Solution.m */; };
 		31C306C5183E93A60043DEDD /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C306C4183E93A60043DEDD /* Connection.m */; };
+		561F0B111E5F73CD00816D8D /* libetts_device_simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B101E5F73CD00816D8D /* libetts_device_simulator.a */; };
+		561F0B1B1E5F74EE00816D8D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B131E5F74EE00816D8D /* .gitignore */; };
+		561F0B1C1E5F74EE00816D8D /* Chinese_Speech_Female.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B141E5F74EE00816D8D /* Chinese_Speech_Female.dat */; };
+		561F0B1D1E5F74EE00816D8D /* Chinese_Speech_Male.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B151E5F74EE00816D8D /* Chinese_Speech_Male.dat */; };
+		561F0B1E1E5F74EE00816D8D /* Chinese_Text.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B161E5F74EE00816D8D /* Chinese_Text.dat */; };
+		561F0B1F1E5F74EE00816D8D /* English_Speech_Female.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B171E5F74EE00816D8D /* English_Speech_Female.dat */; };
+		561F0B201E5F74EE00816D8D /* English_Speech_Male.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B181E5F74EE00816D8D /* English_Speech_Male.dat */; };
+		561F0B211E5F74EE00816D8D /* English_Text.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B191E5F74EE00816D8D /* English_Text.dat */; };
+		561F0B221E5F74EE00816D8D /* offline_engine_tmp_license.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B1A1E5F74EE00816D8D /* offline_engine_tmp_license.dat */; };
+		561F0B241E5F75AB00816D8D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B231E5F75AB00816D8D /* CoreTelephony.framework */; };
+		561F0B261E5F75B500816D8D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B251E5F75B500816D8D /* SystemConfiguration.framework */; };
+		561F0B281E5F75BD00816D8D /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B271E5F75BD00816D8D /* libz.1.2.5.tbd */; };
+		561F0B2A1E5F75C800816D8D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B291E5F75C800816D8D /* libc++.tbd */; };
+		561F0B2C1E5F75DA00816D8D /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B2B1E5F75DA00816D8D /* libstdc++.6.0.9.tbd */; };
+		561F0B2D1E5F7D5A00816D8D /* BDSBuiltInPlayer.h in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B0A1E5F73CD00816D8D /* BDSBuiltInPlayer.h */; };
+		561F0B2E1E5F7D5A00816D8D /* BDSSpeechSynthesizer.h in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B0B1E5F73CD00816D8D /* BDSSpeechSynthesizer.h */; };
+		561F0B2F1E5F7D5A00816D8D /* BDSSpeechSynthesizerDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B0C1E5F73CD00816D8D /* BDSSpeechSynthesizerDelegate.h */; };
+		561F0B301E5F7D5A00816D8D /* BDSSpeechSynthesizerErrors.h in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B0D1E5F73CD00816D8D /* BDSSpeechSynthesizerErrors.h */; };
+		561F0B311E5F7D5A00816D8D /* BDSSpeechSynthesizerParams.h in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B0E1E5F73CD00816D8D /* BDSSpeechSynthesizerParams.h */; };
+		561F0B321E5F7D5A00816D8D /* BDSSynthesizerLogLevel.h in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B0F1E5F73CD00816D8D /* BDSSynthesizerLogLevel.h */; };
+		561F0B331E5F7D5A00816D8D /* libetts_device_simulator.a in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B101E5F73CD00816D8D /* libetts_device_simulator.a */; };
+		561F0B351E5F7E6000816D8D /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B341E5F7E6000816D8D /* libiconv.2.4.0.tbd */; };
 		5C030F8B1C863196006E1BEA /* Award_def_S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C030F7A1C863196006E1BEA /* Award_def_S.mp3 */; };
 		5C030F8C1C863196006E1BEA /* Barn_def_S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C030F7B1C863196006E1BEA /* Barn_def_S.mp3 */; };
 		5C030F8D1C863196006E1BEA /* Bucket_def_S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C030F7C1C863196006E1BEA /* Bucket_def_S.mp3 */; };
@@ -7153,6 +7175,27 @@
 		31C306C1183D900B0043DEDD /* Solution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Solution.m; sourceTree = "<group>"; };
 		31C306C3183E93A60043DEDD /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		31C306C4183E93A60043DEDD /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
+		561F0B0A1E5F73CD00816D8D /* BDSBuiltInPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSBuiltInPlayer.h; sourceTree = "<group>"; };
+		561F0B0B1E5F73CD00816D8D /* BDSSpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizer.h; sourceTree = "<group>"; };
+		561F0B0C1E5F73CD00816D8D /* BDSSpeechSynthesizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerDelegate.h; sourceTree = "<group>"; };
+		561F0B0D1E5F73CD00816D8D /* BDSSpeechSynthesizerErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerErrors.h; sourceTree = "<group>"; };
+		561F0B0E1E5F73CD00816D8D /* BDSSpeechSynthesizerParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerParams.h; sourceTree = "<group>"; };
+		561F0B0F1E5F73CD00816D8D /* BDSSynthesizerLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSynthesizerLogLevel.h; sourceTree = "<group>"; };
+		561F0B101E5F73CD00816D8D /* libetts_device_simulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libetts_device_simulator.a; sourceTree = "<group>"; };
+		561F0B131E5F74EE00816D8D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		561F0B141E5F74EE00816D8D /* Chinese_Speech_Female.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Speech_Female.dat; sourceTree = "<group>"; };
+		561F0B151E5F74EE00816D8D /* Chinese_Speech_Male.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Speech_Male.dat; sourceTree = "<group>"; };
+		561F0B161E5F74EE00816D8D /* Chinese_Text.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Text.dat; sourceTree = "<group>"; };
+		561F0B171E5F74EE00816D8D /* English_Speech_Female.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = English_Speech_Female.dat; sourceTree = "<group>"; };
+		561F0B181E5F74EE00816D8D /* English_Speech_Male.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = English_Speech_Male.dat; sourceTree = "<group>"; };
+		561F0B191E5F74EE00816D8D /* English_Text.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = English_Text.dat; sourceTree = "<group>"; };
+		561F0B1A1E5F74EE00816D8D /* offline_engine_tmp_license.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = offline_engine_tmp_license.dat; sourceTree = "<group>"; };
+		561F0B231E5F75AB00816D8D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		561F0B251E5F75B500816D8D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		561F0B271E5F75BD00816D8D /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		561F0B291E5F75C800816D8D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		561F0B2B1E5F75DA00816D8D /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		561F0B341E5F7E6000816D8D /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
 		5C030F7A1C863196006E1BEA /* Award_def_S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Award_def_S.mp3; sourceTree = "<group>"; };
 		5C030F7B1C863196006E1BEA /* Barn_def_S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Barn_def_S.mp3; sourceTree = "<group>"; };
 		5C030F7C1C863196006E1BEA /* Bucket_def_S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bucket_def_S.mp3; sourceTree = "<group>"; };
@@ -11727,8 +11770,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561F0B351E5F7E6000816D8D /* libiconv.2.4.0.tbd in Frameworks */,
+				561F0B2C1E5F75DA00816D8D /* libstdc++.6.0.9.tbd in Frameworks */,
+				561F0B2A1E5F75C800816D8D /* libc++.tbd in Frameworks */,
+				561F0B281E5F75BD00816D8D /* libz.1.2.5.tbd in Frameworks */,
+				561F0B261E5F75B500816D8D /* SystemConfiguration.framework in Frameworks */,
+				561F0B241E5F75AB00816D8D /* CoreTelephony.framework in Frameworks */,
 				1A4542F31CA35428004D1CE0 /* CoreMedia.framework in Frameworks */,
 				C393881F195376490005279F /* AudioToolbox.framework in Frameworks */,
+				561F0B111E5F73CD00816D8D /* libetts_device_simulator.a in Frameworks */,
 				5CC5FADB18FDFA3700D118B8 /* AVFoundation.framework in Frameworks */,
 				31953E971729EEDE00570087 /* libz.dylib in Frameworks */,
 				31953E9C172A136A00570087 /* QuartzCore.framework in Frameworks */,
@@ -13461,6 +13511,12 @@
 		31953E471729ECC100570087 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				561F0B341E5F7E6000816D8D /* libiconv.2.4.0.tbd */,
+				561F0B2B1E5F75DA00816D8D /* libstdc++.6.0.9.tbd */,
+				561F0B291E5F75C800816D8D /* libc++.tbd */,
+				561F0B271E5F75BD00816D8D /* libz.1.2.5.tbd */,
+				561F0B251E5F75B500816D8D /* SystemConfiguration.framework */,
+				561F0B231E5F75AB00816D8D /* CoreTelephony.framework */,
 				1A4542F21CA35428004D1CE0 /* CoreMedia.framework */,
 				C393881E195376490005279F /* AudioToolbox.framework */,
 				5CC5FADA18FDFA3700D118B8 /* AVFoundation.framework */,
@@ -13516,6 +13572,8 @@
 		31953E651729ED4500570087 /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				561F0B121E5F74EE00816D8D /* OfflineTTSDatFiles */,
+				561F0B091E5F73CD00816D8D /* BDSSpeechSynthesizer_SDK */,
 				03A4011D1C9B7A4F00FBE6D2 /* NSString+HTML Parser */,
 				31953E7A1729ED6000570087 /* GData XML Parser */,
 				31953E7B1729ED6C00570087 /* Unzip Library */,
@@ -13675,6 +13733,35 @@
 				5CEEBFA71ACA05F4002AACC4 /* Area.m */,
 			);
 			name = "Interaction Model";
+			sourceTree = "<group>";
+		};
+		561F0B091E5F73CD00816D8D /* BDSSpeechSynthesizer_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				561F0B0A1E5F73CD00816D8D /* BDSBuiltInPlayer.h */,
+				561F0B0B1E5F73CD00816D8D /* BDSSpeechSynthesizer.h */,
+				561F0B0C1E5F73CD00816D8D /* BDSSpeechSynthesizerDelegate.h */,
+				561F0B0D1E5F73CD00816D8D /* BDSSpeechSynthesizerErrors.h */,
+				561F0B0E1E5F73CD00816D8D /* BDSSpeechSynthesizerParams.h */,
+				561F0B0F1E5F73CD00816D8D /* BDSSynthesizerLogLevel.h */,
+				561F0B101E5F73CD00816D8D /* libetts_device_simulator.a */,
+			);
+			path = BDSSpeechSynthesizer_SDK;
+			sourceTree = "<group>";
+		};
+		561F0B121E5F74EE00816D8D /* OfflineTTSDatFiles */ = {
+			isa = PBXGroup;
+			children = (
+				561F0B131E5F74EE00816D8D /* .gitignore */,
+				561F0B141E5F74EE00816D8D /* Chinese_Speech_Female.dat */,
+				561F0B151E5F74EE00816D8D /* Chinese_Speech_Male.dat */,
+				561F0B161E5F74EE00816D8D /* Chinese_Text.dat */,
+				561F0B171E5F74EE00816D8D /* English_Speech_Female.dat */,
+				561F0B181E5F74EE00816D8D /* English_Speech_Male.dat */,
+				561F0B191E5F74EE00816D8D /* English_Text.dat */,
+				561F0B1A1E5F74EE00816D8D /* offline_engine_tmp_license.dat */,
+			);
+			path = OfflineTTSDatFiles;
 			sourceTree = "<group>";
 		};
 		5C030F791C863196006E1BEA /* Spanish */ = {
@@ -19339,7 +19426,7 @@
 				ORGANIZATIONNAME = "Andreea Danielescu";
 				TargetAttributes = {
 					31953E441729ECC100570087 = {
-						DevelopmentTeam = BWSLUFSJRA;
+						DevelopmentTeam = APBHN348LB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -19406,6 +19493,13 @@
 				5C0421731C618C2B001BBE9D /* CatchQ5A2.mp3 in Resources */,
 				5CB711061C6C292B0062AD61 /* old_CPQR6.m4a in Resources */,
 				5C0ED8D91C75334200003B5A /* ManchatheHorseQ3A2.mp3 in Resources */,
+				561F0B2D1E5F7D5A00816D8D /* BDSBuiltInPlayer.h in Resources */,
+				561F0B2E1E5F7D5A00816D8D /* BDSSpeechSynthesizer.h in Resources */,
+				561F0B2F1E5F7D5A00816D8D /* BDSSpeechSynthesizerDelegate.h in Resources */,
+				561F0B301E5F7D5A00816D8D /* BDSSpeechSynthesizerErrors.h in Resources */,
+				561F0B311E5F7D5A00816D8D /* BDSSpeechSynthesizerParams.h in Resources */,
+				561F0B321E5F7D5A00816D8D /* BDSSynthesizerLogLevel.h in Resources */,
+				561F0B331E5F7D5A00816D8D /* libetts_device_simulator.a in Resources */,
 				C3B66A931BBF0D54005DF0AC /* BookCellView.xib in Resources */,
 				718543941E2DE284002AAD7B /* dda77ec1be0fc3be7a59607cd2fad8e2.mp3 in Resources */,
 				5CB710E51C6C292B0062AD61 /* CPQR3.m4a in Resources */,
@@ -19504,6 +19598,7 @@
 				1A6322B81C0E4D3B00251CB3 /* Story-7-Family-Fun.png in Resources */,
 				5CA9556F1C3237690038FB56 /* naughty_monkey_updatedicon.png in Resources */,
 				5C0ED9E81C753AD400003B5A /* MusclesUseOxygenQ4A1.mp3 in Resources */,
+				561F0B1E1E5F74EE00816D8D /* Chinese_Text.dat in Resources */,
 				5C72E7A81C72BF1000CE4877 /* NewtonsfirstlawQ3A2.mp3 in Resources */,
 				1A6321EA1C0E4D3B00251CB3 /* ch2_bg.png in Resources */,
 				5C9B8B581CB5EFC800420053 /* CannotS.mp3 in Resources */,
@@ -19582,6 +19677,7 @@
 				71193BE11E2FB797003D7EB5 /* a5cb5c38e6f2053caa17c97bab5b9988.mp3 in Resources */,
 				71193D1C1E2FCF4D003D7EB5 /* be72a9de7aff6a3e2815c712491f641a.mp3 in Resources */,
 				1A23DA3B1C20A4FC00FE7C46 /* O2_select large_high_res_min.png in Resources */,
+				561F0B201E5F74EE00816D8D /* English_Speech_Male.dat in Resources */,
 				5C9C07971C57385A00702FCD /* BFCE6_3.m4a in Resources */,
 				1A9E513D1E4F55A600807209 /* AlternateSentences-MetaData-IM.xml in Resources */,
 				5C137D011C8A79CC0023901C /* PlankE.mp3 in Resources */,
@@ -19648,6 +19744,7 @@
 				7185432C1E2DE284002AAD7B /* 11fd061741740534d26a39b933646a29.mp3 in Resources */,
 				1A24254E1C6A80BD002CBB13 /* juan_kick.png in Resources */,
 				5C0422111C618C2B001BBE9D /* WordsOfWisdomQ7.mp3 in Resources */,
+				561F0B1F1E5F74EE00816D8D /* English_Speech_Female.dat in Resources */,
 				036C268E1D9B1B74003626FC /* sequences_EEG02.xml in Resources */,
 				1A6321DA1C0E4D3B00251CB3 /* ash_01.png in Resources */,
 				5C0ED6D31C752C2F00003B5A /* TheContestQ1.mp3 in Resources */,
@@ -20967,6 +21064,7 @@
 				5C0ED9DD1C753AD400003B5A /* MusclesUseOxygenQ2.mp3 in Resources */,
 				5CAE95F91C921DCD00702DB4 /* ProtectedS.mp3 in Resources */,
 				5C0ED6CB1C752C2F00003B5A /* TheBestFarmAwardQ5A2.mp3 in Resources */,
+				561F0B1B1E5F74EE00816D8D /* .gitignore in Resources */,
 				5C9C078B1C57385A00702FCD /* BFCE2_3.m4a in Resources */,
 				5C0EDA0B1C753AD400003B5A /* WhyWeBreatheQ1A1.mp3 in Resources */,
 				5CA5CC691CD1B1C6002A631F /* WhoIsTheBestAnimalS9E.mp3 in Resources */,
@@ -22618,6 +22716,7 @@
 				5C0ED6BD1C752C2F00003B5A /* TheBestFarmAwardQ2A3.mp3 in Resources */,
 				5D9E33BC1C590E9400636150 /* IsPacoAThiefQ1A1.mp3 in Resources */,
 				5C40AED81CBF5C7C00BFEB9F /* LawsS.mp3 in Resources */,
+				561F0B1C1E5F74EE00816D8D /* Chinese_Speech_Female.dat in Resources */,
 				1A6320A91C0E4D3B00251CB3 /* Solutions-MetaData.xml in Resources */,
 				5C0421681C618C2B001BBE9D /* CatchQ3A1.mp3 in Resources */,
 				5C72E6031C72A46F00CE4877 /* TheHaidaPlankHouseQ2A1.mp3 in Resources */,
@@ -23042,6 +23141,7 @@
 				1A63233F1C0E4D3B00251CB3 /* Setups-MetaData.xml in Resources */,
 				71181B1A1E4B841400DF2FFE /* 37899f93cabeecdf0c7b7b8a979f5023.mp3 in Resources */,
 				5C40E0111CC863FC00D8BC48 /* IngredientsE.mp3 in Resources */,
+				561F0B211E5F74EE00816D8D /* English_Text.dat in Resources */,
 				5CB711621C6C46DF0062AD61 /* TheNavajoHoganQ2A2S.mp3 in Resources */,
 				71193C011E2FB797003D7EB5 /* dc7385237081583314e7d1e1daa4ab05.mp3 in Resources */,
 				5C9C07B61C57385A00702FCD /* BFCS1_6A.m4a in Resources */,
@@ -23727,6 +23827,7 @@
 				71193BF71E2FB797003D7EB5 /* bf00178edaf02092712e401573020e82.mp3 in Resources */,
 				5C72E6261C72A46F00CE4877 /* TheAlgonquianWigwamQ4A1.mp3 in Resources */,
 				1A0246511E4AD19900772200 /* EggS.mp3 in Resources */,
+				561F0B221E5F74EE00816D8D /* offline_engine_tmp_license.dat in Resources */,
 				1A6320301C0E4D3B00251CB3 /* Story-6-Everyone-Helps.png in Resources */,
 				5CA955751C3237690038FB56 /* Introductions-MetaData.xml in Resources */,
 				5C72E6061C72A46F00CE4877 /* TheHaidaPlankHouseQ1A3.mp3 in Resources */,
@@ -23964,6 +24065,7 @@
 				5CF6CA4C1CCB2BB50093D3FD /* IslandS.mp3 in Resources */,
 				5C62A94C1C853C7400F28BEB /* Piles_def_S.mp3 in Resources */,
 				5CB710F91C6C292B0062AD61 /* CWWB9.m4a in Resources */,
+				561F0B1D1E5F74EE00816D8D /* Chinese_Speech_Male.dat in Resources */,
 				718543421E2DE284002AAD7B /* 3fc7c640529555fad00e1b95cd0c2238.mp3 in Resources */,
 				5C72E6461C72A46F00CE4877 /* TheSiouxTeepeeQ3A4.mp3 in Resources */,
 				5C0EDA201C753AD400003B5A /* WhyWeBreatheQ5A2.mp3 in Resources */,
@@ -25305,7 +25407,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
-				DEVELOPMENT_TEAM = BWSLUFSJRA;
+				DEVELOPMENT_TEAM = APBHN348LB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -25317,9 +25419,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/EMBRACE_Client/BDSSpeechSynthesizer_SDK",
 				);
 				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "EMBRACE-Chinese";
 				PRODUCT_NAME = "EMBRACE English";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -25332,7 +25436,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
-				DEVELOPMENT_TEAM = BWSLUFSJRA;
+				DEVELOPMENT_TEAM = APBHN348LB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -25344,9 +25448,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/EMBRACE_Client/BDSSpeechSynthesizer_SDK",
 				);
 				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "EMBRACE-Chinese";
 				PRODUCT_NAME = "Embrace E";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

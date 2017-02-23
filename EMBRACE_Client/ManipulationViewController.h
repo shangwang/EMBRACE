@@ -29,7 +29,7 @@
 #import "StepContext.h"
 #import "ContextualMenuDataSource.h"
 #import "ITSController.h"
-
+#import "BDSSpeechSynthesizerDelegate.h"
 @class PageController;
 @class SentenceController;
 @class SolutionStepController;
@@ -47,7 +47,7 @@ typedef enum InteractionMode {
     INTERACTION
 } InteractionMode;
 
-@interface ManipulationViewController : UIViewController <UIGestureRecognizerDelegate, UIScrollViewDelegate, PieContextualMenuDelegate> {
+@interface ManipulationViewController : UIViewController <UIGestureRecognizerDelegate, UIScrollViewDelegate, PieContextualMenuDelegate, BDSSpeechSynthesizerDelegate> {
     
     IBOutlet UIPinchGestureRecognizer *pinchRecognizer;
     IBOutlet UIPanGestureRecognizer *panRecognizer;
