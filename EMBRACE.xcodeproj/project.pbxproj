@@ -1229,6 +1229,7 @@
 		31AA5FAA175FB16500E9A9B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AA5FA9175FB16500E9A9B3 /* LoginViewController.m */; };
 		31C306C2183D900B0043DEDD /* Solution.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C306C1183D900B0043DEDD /* Solution.m */; };
 		31C306C5183E93A60043DEDD /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C306C4183E93A60043DEDD /* Connection.m */; };
+		561638451E65E14D0090FE57 /* TheContestChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 561638441E65E14D0090FE57 /* TheContestChinese.m */; };
 		561F0B111E5F73CD00816D8D /* libetts_device_simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B101E5F73CD00816D8D /* libetts_device_simulator.a */; };
 		561F0B1B1E5F74EE00816D8D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B131E5F74EE00816D8D /* .gitignore */; };
 		561F0B1C1E5F74EE00816D8D /* Chinese_Speech_Female.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B141E5F74EE00816D8D /* Chinese_Speech_Female.dat */; };
@@ -7175,6 +7176,8 @@
 		31C306C1183D900B0043DEDD /* Solution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Solution.m; sourceTree = "<group>"; };
 		31C306C3183E93A60043DEDD /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		31C306C4183E93A60043DEDD /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
+		561638431E65E14D0090FE57 /* TheContestChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheContestChinese.h; sourceTree = "<group>"; };
+		561638441E65E14D0090FE57 /* TheContestChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheContestChinese.m; sourceTree = "<group>"; };
 		561F0B0A1E5F73CD00816D8D /* BDSBuiltInPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSBuiltInPlayer.h; sourceTree = "<group>"; };
 		561F0B0B1E5F73CD00816D8D /* BDSSpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizer.h; sourceTree = "<group>"; };
 		561F0B0C1E5F73CD00816D8D /* BDSSpeechSynthesizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerDelegate.h; sourceTree = "<group>"; };
@@ -13654,6 +13657,7 @@
 		31953E7E1729ED8D00570087 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				561638421E65E10A0090FE57 /* SpeakChinese */,
 				1AFC9BDE1DAC485A00189CD2 /* ITS */,
 				316CFADF1773A512004216D0 /* Physical Manipulation */,
 				1AD3CC8A1A251CE600E18B1C /* PlayAudioFile.h */,
@@ -13733,6 +13737,15 @@
 				5CEEBFA71ACA05F4002AACC4 /* Area.m */,
 			);
 			name = "Interaction Model";
+			sourceTree = "<group>";
+		};
+		561638421E65E10A0090FE57 /* SpeakChinese */ = {
+			isa = PBXGroup;
+			children = (
+				561638431E65E14D0090FE57 /* TheContestChinese.h */,
+				561638441E65E14D0090FE57 /* TheContestChinese.m */,
+			);
+			name = SpeakChinese;
 			sourceTree = "<group>";
 		};
 		561F0B091E5F73CD00816D8D /* BDSSpeechSynthesizer_SDK */ = {
@@ -25253,6 +25266,7 @@
 				311646AE175FCFE100B483F0 /* Chapter.m in Sources */,
 				C36473EE1A9AA5C100FD7494 /* AlternateSentence.m in Sources */,
 				5DB15D981C73955C00130705 /* ScriptAudio.m in Sources */,
+				561638451E65E14D0090FE57 /* TheContestChinese.m in Sources */,
 				1A2C94971D8464E4001E46A2 /* PossibleInteractionController.m in Sources */,
 				1AFC9BFD1DAC485A00189CD2 /* SyntaxSkill.m in Sources */,
 				C3B52156192A97D7003FF639 /* InteractionModel.m in Sources */,

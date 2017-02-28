@@ -22,7 +22,7 @@
 #import "ManipulationAnalyser.h"
 #import "NSString+MD5.h"
 #import "BDSSpeechSynthesizer.h"
-
+#import "TheContestChinese.h"
 @interface ManipulationViewController ()<ManipulationViewDelegate> {
     NSString *chapterTitle;
     NSString *bookTitle;
@@ -309,12 +309,14 @@ BOOL wasPathFollowed = false;
     [[BDSSpeechSynthesizer sharedInstance] setSynthesizerDelegate: self];
     [self configureOnlineTTS];
     
+    
+    /*
     [[BDSSpeechSynthesizer sharedInstance] setSynthesizerParam:[NSNumber numberWithFloat:10.0]
                                                         forKey: BDS_SYNTHESIZER_PARAM_ONLINE_REQUEST_TIMEOUT ];
     NSError* speakerr;
     
   [[BDSSpeechSynthesizer sharedInstance] speakSentence: @"农夫马里奥召集了所有的动物。他打开了牛的栅栏，牛走向了围栏。然后, 马里奥打开了山羊的栅栏，山羊走向了牛。小鸡从屋顶上飞了下来，坐在了牛的背上。" withError:&speakerr];
-    
+    */
 }
 
 //Custom back button to confirm navigation to library page
@@ -378,9 +380,9 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     currentGroupings = [[NSMutableDictionary alloc] init];
     
     //Perform setup of setentences for page
-   // [sc setupSentencesForPage];
+    [sc setupSentencesForPage];
     isAudioLeft = false;
-  //  [self playCurrentSentenceAudio];
+    [self playCurrentSentenceAudio];
     
     //Perform setup of areas and paths for page
     [self drawAreasForPage];
@@ -3854,10 +3856,14 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         //If we are on the first or second manipulation page of The Contest, play the audio of the current sentence
         if ([chapterTitle isEqualToString:@"The Contest"] && ([pageContext.currentPageId containsString:PM1] || [pageContext.currentPageId containsString:PM2])) {
             if ((conditionSetup.language == BILINGUAL)) {
+                
+                
                 sentenceAudioFile = [NSString stringWithFormat:@"BFEC%d.m4a", sentenceContext.currentSentence];
             }
             else {
-                sentenceAudioFile = [NSString stringWithFormat:@"BFTC%d.m4a", sentenceContext.currentSentence];
+                TheContestChinese * tc=[[TheContestChinese alloc]init];
+                [tc playSentence: (int)sentenceContext.currentSentence];
+               // sentenceAudioFile = [NSString stringWithFormat:@"BFTC%d.m4a", sentenceContext.currentSentence];
             }
         }
         
@@ -3967,6 +3973,8 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
             //If we are on the first or second manipulation page of The Navajo Hogan, play the current sentence
             if ([chapterTitle isEqualToString:@"The Navajo Hogan"] && ([pageContext.currentPageId containsString:PM1] || [pageContext.currentPageId containsString:PM2] || [pageContext.currentPageId containsString:PM3])) {
                 if (conditionSetup.language == BILINGUAL && [pageContext.currentPageId.lowercaseString containsString:@"story1"]) {
+                    
+                    
                     sentenceAudioFile = [NSString stringWithFormat:@"TheNavajoHoganS%dS.mp3", sentenceContext.currentSentence];
                 }
                 else {
