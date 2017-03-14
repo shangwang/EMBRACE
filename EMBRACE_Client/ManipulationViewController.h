@@ -30,6 +30,7 @@
 #import "ContextualMenuDataSource.h"
 #import "ITSController.h"
 #import "BDSSpeechSynthesizerDelegate.h"
+#import "TheContestChinese.h"
 @class PageController;
 @class SentenceController;
 @class SolutionStepController;
@@ -89,6 +90,7 @@ typedef enum InteractionMode {
 @property (nonatomic, strong) ContextualMenuDataSource *menuDataSource;
 @property (nonatomic, assign) EMComplexity currentComplexityLevel;
 @property (nonatomic) BOOL isUserMovingBack;
+@property (nonatomic, strong) TheContestChinese* chineseModel;
 
 - (void)loadFirstPage;
 - (void)setManipulationContext;

@@ -1252,6 +1252,7 @@
 		561F0B321E5F7D5A00816D8D /* BDSSynthesizerLogLevel.h in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B0F1E5F73CD00816D8D /* BDSSynthesizerLogLevel.h */; };
 		561F0B331E5F7D5A00816D8D /* libetts_device_simulator.a in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B101E5F73CD00816D8D /* libetts_device_simulator.a */; };
 		561F0B351E5F7E6000816D8D /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B341E5F7E6000816D8D /* libiconv.2.4.0.tbd */; };
+		564123101E77CF38006D0075 /* ChinsesTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = 5641230F1E77CF38006D0075 /* ChinsesTrans.m */; };
 		5C030F8B1C863196006E1BEA /* Award_def_S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C030F7A1C863196006E1BEA /* Award_def_S.mp3 */; };
 		5C030F8C1C863196006E1BEA /* Barn_def_S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C030F7B1C863196006E1BEA /* Barn_def_S.mp3 */; };
 		5C030F8D1C863196006E1BEA /* Bucket_def_S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C030F7C1C863196006E1BEA /* Bucket_def_S.mp3 */; };
@@ -7199,6 +7200,8 @@
 		561F0B291E5F75C800816D8D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		561F0B2B1E5F75DA00816D8D /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		561F0B341E5F7E6000816D8D /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		5641230E1E77CF38006D0075 /* ChinsesTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChinsesTrans.h; sourceTree = "<group>"; };
+		5641230F1E77CF38006D0075 /* ChinsesTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChinsesTrans.m; sourceTree = "<group>"; };
 		5C030F7A1C863196006E1BEA /* Award_def_S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Award_def_S.mp3; sourceTree = "<group>"; };
 		5C030F7B1C863196006E1BEA /* Barn_def_S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Barn_def_S.mp3; sourceTree = "<group>"; };
 		5C030F7C1C863196006E1BEA /* Bucket_def_S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bucket_def_S.mp3; sourceTree = "<group>"; };
@@ -13744,6 +13747,8 @@
 			children = (
 				561638431E65E14D0090FE57 /* TheContestChinese.h */,
 				561638441E65E14D0090FE57 /* TheContestChinese.m */,
+				5641230E1E77CF38006D0075 /* ChinsesTrans.h */,
+				5641230F1E77CF38006D0075 /* ChinsesTrans.m */,
 			);
 			name = SpeakChinese;
 			sourceTree = "<group>";
@@ -25245,6 +25250,7 @@
 				C3B5215A192AB610003FF639 /* EBookImporter.m in Sources */,
 				1AFC9C011DAC485A00189CD2 /* ITSController.m in Sources */,
 				1ADDE2FA1D808CD7002FB71C /* SentenceController.m in Sources */,
+				564123101E77CF38006D0075 /* ChinsesTrans.m in Sources */,
 				1AB028FC1ACF0890006CC916 /* AuthoringModeViewController.m in Sources */,
 				033BC05D1C501BB600A1EC14 /* ActivityMode.m in Sources */,
 				030C8A981C5B1C6A00042C6F /* ImagineManipulationSolution.m in Sources */,

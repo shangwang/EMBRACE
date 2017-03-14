@@ -350,7 +350,7 @@
     //Get steps for current sentence
     NSMutableArray *currSolSteps = [self returnCurrentSolutionSteps];
     
-    //Get current step to be completed
+    //Get current step to be completed 
     ActionStep *currSolStep = [currSolSteps objectAtIndex:stepContext.currentStep - 1];
     
     //Check if we able to increment current step

@@ -10,4 +10,5 @@
 #import "BDSSpeechSynthesizer.h"
 @interface TheContestChinese : NSObject <BDSSpeechSynthesizerDelegate>
 -(void)playSentence: (int)index;
+-(void)playTranslation: (NSString*)englishTxt;
 @end

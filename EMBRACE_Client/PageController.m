@@ -27,7 +27,6 @@
 
 -(id)initWithController:(ManipulationViewController *) superMvc {
     self = [super init];
-    
     if (self) {
         //Create local Pointers to needed classes, variables and properties within mvc
         self.mvc = superMvc;

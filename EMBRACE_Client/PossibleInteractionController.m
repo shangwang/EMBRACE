@@ -19,7 +19,6 @@
 //@synthesize pageContext;
 //@synthesize sentenceContext;
 @synthesize manipulationContext;
-
 -(id)initWithController:(ManipulationViewController *) superMvc {
     self = [super init];
     

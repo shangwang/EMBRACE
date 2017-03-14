@@ -22,8 +22,9 @@
 #import "ManipulationAnalyser.h"
 #import "NSString+MD5.h"
 #import "BDSSpeechSynthesizer.h"
-#import "TheContestChinese.h"
-@interface ManipulationViewController ()<ManipulationViewDelegate> {
+#import "ChinsesTrans.h"
+#import "BDSSpeechSynthesizer.h"
+@interface ManipulationViewController ()<ManipulationViewDelegate, BDSSpeechSynthesizerDelegate> {
     NSString *chapterTitle;
     NSString *bookTitle;
     
@@ -123,7 +124,7 @@
 @synthesize menuDataSource;
 @synthesize bookView;
 @synthesize isUserMovingBack;
-
+@synthesize chineseModel;
 //Used to determine the required proximity of 2 hotspots to group two items together.
 float const groupingProximity = 20.0;
 
@@ -135,6 +136,7 @@ BOOL wasPathFollowed = false;
     bookView.frame = self.view.bounds;
 }
 
+
 /*  Initial view setup after webview loads. Adds manipulationView as a subview and adds view constraints
  *   Initilizes class variables
  */
@@ -144,6 +146,8 @@ BOOL wasPathFollowed = false;
     
     //[self.view addSubview:self.manipulationView];
     self.manipulationView.delegate = self;
+    [[BDSSpeechSynthesizer sharedInstance] setSynthesizerDelegate: self];
+    [self configureOnlineTTS];
     //[self.view sendSubviewToBack:self.manipulationView];
     
     //    NSLayoutConstraint *xCenterConstraint = [NSLayoutConstraint constraintWithItem:self.manipulationView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
@@ -304,19 +308,9 @@ BOOL wasPathFollowed = false;
         }
     }
     
-    ////////////////////////////TTS/////////////////////////
-    
-    [[BDSSpeechSynthesizer sharedInstance] setSynthesizerDelegate: self];
-    [self configureOnlineTTS];
-    
-    
-    /*
-    [[BDSSpeechSynthesizer sharedInstance] setSynthesizerParam:[NSNumber numberWithFloat:10.0]
-                                                        forKey: BDS_SYNTHESIZER_PARAM_ONLINE_REQUEST_TIMEOUT ];
-    NSError* speakerr;
-    
-  [[BDSSpeechSynthesizer sharedInstance] speakSentence: @"农夫马里奥召集了所有的动物。他打开了牛的栅栏，牛走向了围栏。然后, 马里奥打开了山羊的栅栏，山羊走向了牛。小鸡从屋顶上飞了下来，坐在了牛的背上。" withError:&speakerr];
-    */
+    //////////////////////////// Initialize Chinese TTS model /////////////////////////
+    chineseModel=[[TheContestChinese alloc]init];
+
 }
 
 //Custom back button to confirm navigation to library page
@@ -814,6 +808,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         }
         //Taps on vocab word in story
         else if ([pageContext.currentPageId containsString:@"-PM"] && conditionSetup.isOnDemandVocabEnabled) {
+            
             [self tapGestureOnStoryWord:englishSentenceText:sentenceIDNum:spanishExt:sentenceText];
         }
     }
@@ -929,7 +924,22 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
  *  Handles tap gesture on vocab words in story to play audio
  */
 - (void)tapGestureOnStoryWord:(NSString *)englishSentenceText :(NSInteger)sentenceIDNum :(NSString *)spanishExt :(NSString *)sentenceText {
+    
+    NSError* speakerr;
+    
+    ChinsesTrans* transModel=[[ChinsesTrans alloc]init];
+    
+    NSString* EngString= [transModel ChinesetoEnglish:englishSentenceText];
+    
+    
+    NSString* output= [[NSString alloc]initWithFormat:@"%@, %@",englishSentenceText,EngString ];
+    
+    [[BDSSpeechSynthesizer sharedInstance] speakSentence: output withError:&speakerr];
+    
+    
     //Get steps for current sentence
+    
+    /*
     NSMutableArray *currSolSteps = [ssc returnCurrentSolutionSteps];
     
     if (![self.playaudioClass isAudioLeftInSequence]) {
@@ -967,9 +977,10 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
             }
             
             [self.playaudioClass stopPlayAudioFile];
-            [self playAudioForVocabWord:englishSentenceText :spanishExt];
+            [chineseModel playTranslation:englishSentenceText];
+            //[self playAudioForVocabWord:englishSentenceText :spanishExt];
         }
-    }
+    }*/
 }
 
 /*
@@ -3861,8 +3872,8 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
                 sentenceAudioFile = [NSString stringWithFormat:@"BFEC%d.m4a", sentenceContext.currentSentence];
             }
             else {
-                TheContestChinese * tc=[[TheContestChinese alloc]init];
-                [tc playSentence: (int)sentenceContext.currentSentence];
+                
+                [chineseModel playSentence: (int)sentenceContext.currentSentence];
                // sentenceAudioFile = [NSString stringWithFormat:@"BFTC%d.m4a", sentenceContext.currentSentence];
             }
         }
