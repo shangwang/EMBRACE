@@ -1238,7 +1238,6 @@
 		561F0B1F1E5F74EE00816D8D /* English_Speech_Female.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B171E5F74EE00816D8D /* English_Speech_Female.dat */; };
 		561F0B201E5F74EE00816D8D /* English_Speech_Male.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B181E5F74EE00816D8D /* English_Speech_Male.dat */; };
 		561F0B211E5F74EE00816D8D /* English_Text.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B191E5F74EE00816D8D /* English_Text.dat */; };
-		561F0B221E5F74EE00816D8D /* offline_engine_tmp_license.dat in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B1A1E5F74EE00816D8D /* offline_engine_tmp_license.dat */; };
 		561F0B241E5F75AB00816D8D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B231E5F75AB00816D8D /* CoreTelephony.framework */; };
 		561F0B261E5F75B500816D8D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B251E5F75B500816D8D /* SystemConfiguration.framework */; };
 		561F0B281E5F75BD00816D8D /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B271E5F75BD00816D8D /* libz.1.2.5.tbd */; };
@@ -1253,6 +1252,8 @@
 		561F0B331E5F7D5A00816D8D /* libetts_device_simulator.a in Resources */ = {isa = PBXBuildFile; fileRef = 561F0B101E5F73CD00816D8D /* libetts_device_simulator.a */; };
 		561F0B351E5F7E6000816D8D /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 561F0B341E5F7E6000816D8D /* libiconv.2.4.0.tbd */; };
 		564123101E77CF38006D0075 /* ChinsesTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = 5641230F1E77CF38006D0075 /* ChinsesTrans.m */; };
+		5662086B1E8D8BFA00A94AB8 /* temp_license in Resources */ = {isa = PBXBuildFile; fileRef = 5662086A1E8D8BFA00A94AB8 /* temp_license */; };
+		5662086D1E8D8C1200A94AB8 /* temp_license.dat in Resources */ = {isa = PBXBuildFile; fileRef = 5662086C1E8D8C1200A94AB8 /* temp_license.dat */; };
 		5C030F8B1C863196006E1BEA /* Award_def_S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C030F7A1C863196006E1BEA /* Award_def_S.mp3 */; };
 		5C030F8C1C863196006E1BEA /* Barn_def_S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C030F7B1C863196006E1BEA /* Barn_def_S.mp3 */; };
 		5C030F8D1C863196006E1BEA /* Bucket_def_S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C030F7C1C863196006E1BEA /* Bucket_def_S.mp3 */; };
@@ -7193,7 +7194,6 @@
 		561F0B171E5F74EE00816D8D /* English_Speech_Female.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = English_Speech_Female.dat; sourceTree = "<group>"; };
 		561F0B181E5F74EE00816D8D /* English_Speech_Male.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = English_Speech_Male.dat; sourceTree = "<group>"; };
 		561F0B191E5F74EE00816D8D /* English_Text.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = English_Text.dat; sourceTree = "<group>"; };
-		561F0B1A1E5F74EE00816D8D /* offline_engine_tmp_license.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = offline_engine_tmp_license.dat; sourceTree = "<group>"; };
 		561F0B231E5F75AB00816D8D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		561F0B251E5F75B500816D8D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		561F0B271E5F75BD00816D8D /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
@@ -7202,6 +7202,8 @@
 		561F0B341E5F7E6000816D8D /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
 		5641230E1E77CF38006D0075 /* ChinsesTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChinsesTrans.h; sourceTree = "<group>"; };
 		5641230F1E77CF38006D0075 /* ChinsesTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChinsesTrans.m; sourceTree = "<group>"; };
+		5662086A1E8D8BFA00A94AB8 /* temp_license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temp_license; sourceTree = "<group>"; };
+		5662086C1E8D8C1200A94AB8 /* temp_license.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temp_license.dat; sourceTree = "<group>"; };
 		5C030F7A1C863196006E1BEA /* Award_def_S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Award_def_S.mp3; sourceTree = "<group>"; };
 		5C030F7B1C863196006E1BEA /* Barn_def_S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Barn_def_S.mp3; sourceTree = "<group>"; };
 		5C030F7C1C863196006E1BEA /* Bucket_def_S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bucket_def_S.mp3; sourceTree = "<group>"; };
@@ -13777,7 +13779,8 @@
 				561F0B171E5F74EE00816D8D /* English_Speech_Female.dat */,
 				561F0B181E5F74EE00816D8D /* English_Speech_Male.dat */,
 				561F0B191E5F74EE00816D8D /* English_Text.dat */,
-				561F0B1A1E5F74EE00816D8D /* offline_engine_tmp_license.dat */,
+				5662086C1E8D8C1200A94AB8 /* temp_license.dat */,
+				5662086A1E8D8BFA00A94AB8 /* temp_license */,
 			);
 			path = OfflineTTSDatFiles;
 			sourceTree = "<group>";
@@ -19840,6 +19843,7 @@
 				71E4250E1E2D4DAC0029BDEC /* 37c0221f4801611c0726c7e4913a2e3a.mp3 in Resources */,
 				1A6323421C0E4D3B00251CB3 /* PMStyle.css in Resources */,
 				71193D091E2FCF4D003D7EB5 /* 906c1b1979616000640b9a8b676dbd6c.mp3 in Resources */,
+				5662086B1E8D8BFA00A94AB8 /* temp_license in Resources */,
 				5C62A99A1C854C5900F28BEB /* Rattle_def_S.mp3 in Resources */,
 				5CCD8FD41C7405EC00D2EC2B /* VolcanoesQ3A3.mp3 in Resources */,
 				5C1C4D531D238A2800547783 /* VeinsE.mp3 in Resources */,
@@ -23821,6 +23825,7 @@
 				5C28DCF21C2BA66E005ACD07 /* PMStyle.css in Resources */,
 				5D9E34B11C590E9600636150 /* TheMysteryIsSolvedQ7A1.mp3 in Resources */,
 				5C0ED9D31C753AD400003B5A /* GettingMoreOxygenForTheMusclesQ6.mp3 in Resources */,
+				5662086D1E8D8C1200A94AB8 /* temp_license.dat in Resources */,
 				1A6320FA1C0E4D3B00251CB3 /* mancha_naked.png in Resources */,
 				7119393C1E2F3CF8003D7EB5 /* 846b3e8928f9d48165829edc310bff9b.mp3 in Resources */,
 				71193CFA1E2FCF4D003D7EB5 /* 73da7967ab47ca91c3880839a6c82aaa.mp3 in Resources */,
@@ -23845,7 +23850,6 @@
 				71193BF71E2FB797003D7EB5 /* bf00178edaf02092712e401573020e82.mp3 in Resources */,
 				5C72E6261C72A46F00CE4877 /* TheAlgonquianWigwamQ4A1.mp3 in Resources */,
 				1A0246511E4AD19900772200 /* EggS.mp3 in Resources */,
-				561F0B221E5F74EE00816D8D /* offline_engine_tmp_license.dat in Resources */,
 				1A6320301C0E4D3B00251CB3 /* Story-6-Everyone-Helps.png in Resources */,
 				5CA955751C3237690038FB56 /* Introductions-MetaData.xml in Resources */,
 				5C72E6061C72A46F00CE4877 /* TheHaidaPlankHouseQ1A3.mp3 in Resources */,
@@ -25443,7 +25447,7 @@
 					"$(PROJECT_DIR)/EMBRACE_Client/BDSSpeechSynthesizer_SDK",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_BUNDLE_IDENTIFIER = "EMBRACE-Chinese";
+				PRODUCT_BUNDLE_IDENTIFIER = ASU.EMBRACE;
 				PRODUCT_NAME = "EMBRACE English";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -25472,7 +25476,7 @@
 					"$(PROJECT_DIR)/EMBRACE_Client/BDSSpeechSynthesizer_SDK",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_BUNDLE_IDENTIFIER = "EMBRACE-Chinese";
+				PRODUCT_BUNDLE_IDENTIFIER = ASU.EMBRACE;
 				PRODUCT_NAME = "Embrace E";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

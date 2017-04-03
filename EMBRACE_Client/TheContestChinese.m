@@ -57,7 +57,41 @@
 
 
 -(void)configureOnlineTTS{
+    
+    NSString* offlineEngineSpeechData = [[NSBundle mainBundle] pathForResource:@"Chinese_Speech_Female" ofType:@"dat"];
+    NSString* offlineEngineTextData = [[NSBundle mainBundle] pathForResource:@"Chinese_Text" ofType:@"dat"];
+    NSString* offlineEngineEnglishSpeechData = [[NSBundle mainBundle] pathForResource:@"English_Speech_Female" ofType:@"dat"];
+    NSString* offlineEngineEnglishTextData = [[NSBundle mainBundle] pathForResource:@"English_Text" ofType:@"dat"];
+    
+    
+     NSString* licenseDat = [[NSBundle mainBundle] pathForResource:@"temp_license" ofType:nil];
+    
     [[BDSSpeechSynthesizer sharedInstance] setApiKey:@"N0xhGEV647Coa1W5ywixKKZl" withSecretKey:@"09ff49a674941878f212f2531e2eb4fb"];
+    
+    
+    
+    BOOL b1=  [[NSFileManager defaultManager] fileExistsAtPath:offlineEngineTextData];
+    BOOL b2=  [[NSFileManager defaultManager] fileExistsAtPath:offlineEngineSpeechData];
+    
+    ///无法实现离线语音请检查以下部分
+    NSError* err = [[BDSSpeechSynthesizer sharedInstance] loadOfflineEngine:offlineEngineTextData speechDataPath:offlineEngineSpeechData licenseFilePath:nil withAppCode:@"9317413"];
+
+    
+   //
+    
+    
+    
+    if( err!= nil) {}
+    
+    if(err){
+        return;
+    }
+   // [self setCurrentOfflineSpeaker:OfflineSpeaker_Female];
+    err = [[BDSSpeechSynthesizer sharedInstance] loadEnglishDataForOfflineEngine:offlineEngineEnglishTextData speechData:offlineEngineEnglishSpeechData];
+    if(err){
+        return;
+    }
 }
+
 
 @end

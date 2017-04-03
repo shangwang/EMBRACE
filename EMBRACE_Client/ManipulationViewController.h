@@ -31,6 +31,7 @@
 #import "ITSController.h"
 #import "BDSSpeechSynthesizerDelegate.h"
 #import "TheContestChinese.h"
+#import "BDSSpeechSynthesizer.h"
 @class PageController;
 @class SentenceController;
 @class SolutionStepController;

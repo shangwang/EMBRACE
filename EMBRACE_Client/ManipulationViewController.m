@@ -983,6 +983,19 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     }*/
 }
 
+
+
+
+
+- (void)synthesizerFinishWorkingSentence:(NSInteger)SynthesizeSentence{
+    
+    
+    
+}
+
+
+
+
 /*
  *  Handles tap gesture on object
  */
