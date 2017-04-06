@@ -48,7 +48,6 @@
     self.audioDuration = CMTimeGetSeconds(asset.duration);
 }
 
-
 /* Plays text-to-speech audio in a given language in a certain time */
 -(void)playWordAudioTimed:(NSTimer *) wordAndLang {
     NSDictionary *wrapper = (NSDictionary *)[wordAndLang userInfo];
