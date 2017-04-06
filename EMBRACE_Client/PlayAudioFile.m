@@ -36,7 +36,6 @@
     self.audioDuration = CMTimeGetSeconds(asset.duration);
 }
 
-
 -(void)initPlayer2: (NSString*) audioFilePath
 {
     NSURL *soundFileURL = [NSURL fileURLWithPath:audioFilePath];
