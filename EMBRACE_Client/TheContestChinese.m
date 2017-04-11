@@ -81,11 +81,6 @@
     ///无法实现离线语音请检查以下部分
     NSError* err = [[BDSSpeechSynthesizer sharedInstance] loadOfflineEngine:offlineEngineTextData speechDataPath:offlineEngineSpeechData licenseFilePath:nil withAppCode:@"9317413"];
 
-    
-   //
-    
-    
-    
     if( err!= nil) {}
     
     if(err){

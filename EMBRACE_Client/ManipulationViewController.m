@@ -125,7 +125,7 @@
 @synthesize bookView;
 @synthesize isUserMovingBack;
 @synthesize chineseModel;
-
+@synthesize  txtlanguageType;
 //Used to determine the required proximity of 2 hotspots to group two items together.
 float const groupingProximity = 20.0;
 
@@ -135,6 +135,12 @@ BOOL wasPathFollowed = false;
     [super viewWillAppear:animated];
     
     bookView.frame = self.view.bounds;
+    if( [chapterTitle isEqualToString:@"The Contest"]&&[bookTitle isEqualToString:@"The Best Farm"] ){
+        txtlanguageType=1;//Chinese
+    }else{
+        txtlanguageType=0;//English
+    }
+    
 }
 
 
@@ -932,14 +938,12 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     NSString* chineseString=englishSentenceText;
     
     ChinsesTrans* transModel=[[ChinsesTrans alloc]init];
+    NSString* EngString=englishSentenceText;
+    if(1==txtlanguageType){
+        EngString= [transModel ChinesetoEnglish:englishSentenceText];
+    }
     
-    NSString* EngString= [transModel ChinesetoEnglish:englishSentenceText];
-    
-    
-    NSString* output= [[NSString alloc]initWithFormat:@"%@",englishSentenceText ];
-    
-    chineseModel.speechState=1;
-   
+  
     
    // [[BDSSpeechSynthesizer sharedInstance] speakSentence: output withError:&speakerr];
     
@@ -3965,7 +3969,12 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
             else {
                 
                 //[chineseModel playSentence: (int)sentenceContext.currentSentence];
-               sentenceAudioFile = [NSString stringWithFormat:@"BFTCC%d.mp3", sentenceContext.currentSentence];
+                int ttt=(int)sentenceContext.currentSentence;
+                if(1==txtlanguageType&&ttt<6){
+                    sentenceAudioFile = [NSString stringWithFormat:@"BFTCC%d.mp3", sentenceContext.currentSentence];
+                }else{
+                    sentenceAudioFile = [NSString stringWithFormat:@"BFTC%d.m4a", sentenceContext.currentSentence];
+                }
             }
         }
         

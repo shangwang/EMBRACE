@@ -12,10 +12,7 @@
 
 
 
--(void)EnglishtoChinese: (NSString*) str{
-   
-    
-}
+
 
 
 
@@ -36,6 +33,27 @@
     }
     return engStr;
 }
+
+
+
+-(NSString*)EnglishtoChinese: (NSString*) str{
+    NSString* chStr=@"评委";
+    if([str isEqualToString:@"围栏"]){
+        chStr=@"Contest";
+    }else if([str isEqualToString:@"走"]){
+        chStr=@"Chicken";
+    }else if([str isEqualToString:@"山羊"]){
+        chStr=@"Corral";
+    }else if([str isEqualToString:@"从"]){
+        chStr=@"Farm";
+    }else if([str isEqualToString:@"屋顶上"]){
+        chStr=@"Flew";
+    }else if([str isEqualToString:@""]){
+        chStr=@"Walked";
+    }
+    return chStr;
+}
+
 
 
 @end

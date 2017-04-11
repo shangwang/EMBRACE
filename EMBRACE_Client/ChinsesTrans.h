@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ChinsesTrans : NSObject
--(void)EnglishtoChinese: (NSString*) str;
+-(NSString*)EnglishtoChinese: (NSString*) str;
 -(NSString*)ChinesetoEnglish: (NSString*) str;
 @end
