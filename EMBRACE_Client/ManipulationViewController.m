@@ -933,7 +933,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
  */
 - (void)tapGestureOnStoryWord:(NSString *)englishSentenceText :(NSInteger)sentenceIDNum :(NSString *)spanishExt :(NSString *)sentenceText {
    
-    
+    /*
     NSError* speakerr;
     NSString* chineseString=englishSentenceText;
     
@@ -942,7 +942,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     if(1==txtlanguageType){
         EngString= [transModel ChinesetoEnglish:englishSentenceText];
     }
-    
+    */
   
     
    // [[BDSSpeechSynthesizer sharedInstance] speakSentence: output withError:&speakerr];
@@ -978,6 +978,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
             }
         }
         
+        
         if (!playedAudio && [englishSentenceText length] > 0)// && [[Translation translationWords] objectForKey:englishSentenceText])
         {
             [[ServerCommunicationController sharedInstance] logTapWord:englishSentenceText :manipulationContext];
@@ -987,8 +988,9 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
             }
             
             [self.playaudioClass stopPlayAudioFile];
+           [ self playSpanishAudioForVocabWord:englishSentenceText :spanishExt];
             //[chineseModel playTranslation:englishSentenceText];
-            [self playAudioForChineseVocabWord: EngString :EngString];
+           // [self playAudioForChineseVocabWord: EngString :EngString];
         }
     }
 }
@@ -1116,7 +1118,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 
 /*
- *  Plays audio for vocab word on story page
+ *  Plays Chinese audio for vocab word on story page
  */
 - (void)playAudioForChineseVocabWord:(NSString *)englishSentenceText :(NSString *)chineseTxt {
     [self highlightImageForText:englishSentenceText];
@@ -1164,6 +1166,48 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         
         [[ServerCommunicationController sharedInstance] logPlayManipulationAudio:englishSentenceText inLanguage:ENGLISH_TXT ofType:PLAY_WORD :manipulationContext];
         [[ServerCommunicationController sharedInstance] logPlayManipulationAudio:englishSentenceText inLanguage:ENGLISH_TXT ofType:PLAY_WORD :manipulationContext];
+    }
+}
+
+
+
+
+
+/*
+ *  Plays audio for vocab word on story page
+ */
+- (void)playSpanishAudioForVocabWord:(NSString *)englishSentenceText :(NSString *)spanishExt {
+    [self highlightImageForText:englishSentenceText];
+    
+    //Remove any whitespaces since this would cause the a failure for reading the file name
+    englishSentenceText = [englishSentenceText stringByReplacingOccurrencesOfString:@" " withString:EMPTYSTRING];
+    
+    if (conditionSetup.language == BILINGUAL) {
+        NSString *spanishAudio = [NSString stringWithFormat:@"%@%@.mp3", [englishSentenceText capitalizedString], S];
+        NSString *engAudio = [NSString stringWithFormat:@"%@%@.mp3", [englishSentenceText capitalizedString], E];
+        
+       
+        
+        if ([spanishExt isEqualToString:EMPTYSTRING] == NO) {
+            spanishAudio = [NSString stringWithFormat:@"%@%@.mp3", [englishSentenceText capitalizedString], spanishExt];
+        }
+        //bool success =   [ self.playaudioClass playAudioFile:self :spanishAudio];
+        
+        bool success =   [ self.playaudioClass playAudioWithFilePath:self :spanishAudio];
+
+        if (!success) {
+            NSString *spanishAudio = [NSString stringWithFormat:@"%@%@.m4a", englishSentenceText, S];
+            NSString *engAudio = [NSString stringWithFormat:@"%@%@.m4a", englishSentenceText, E];
+            
+            if ([spanishExt isEqualToString:EMPTYSTRING] == NO) {
+                spanishAudio = [NSString stringWithFormat:@"%@%@.m4a", englishSentenceText, spanishExt];
+            }
+            
+           [ self.playaudioClass playAudioFile:self :spanishAudio];
+        }
+
+        [[ServerCommunicationController sharedInstance] logPlayManipulationAudio:englishSentenceText inLanguage:SPANISH_TXT ofType:PLAY_WORD :manipulationContext];
+
     }
 }
 
@@ -4185,23 +4229,23 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
             if ([audio containsString:INTRO]) {
                 if ([ConditionSetup sharedInstance].condition == EMBRACE) {
                     if ([ConditionSetup sharedInstance].currentMode == PM_MODE || [ConditionSetup sharedInstance].currentMode == ITSPM_MODE) {
-                        if ([ConditionSetup sharedInstance].reader == USER) {
+                        if ([ConditionSetup sharedInstance].reader == USER &&[ConditionSetup sharedInstance].appMode && [ConditionSetup sharedInstance].nativeLanguage==ENGLISH ) {
                             audio = @"IntroDyadReads_PM";
                         } else {
-                            audio = @"IntroIpadReads_PM";
+                            audio = @"IntroIpadReads_PM_S";
                         }
                     } else {
-                        if ([ConditionSetup sharedInstance].reader == USER) {
+                        if ([ConditionSetup sharedInstance].reader == USER && [ConditionSetup sharedInstance].nativeLanguage==ENGLISH ) {
                             audio = @"IntroDyadReads_IM";
                         } else {
-                            audio = @"IntroIpadReads_IM";
+                            audio = @"IntroIpadReads_IM_S";
                         }
                     }
                 } else {
-                    if ([ConditionSetup sharedInstance].reader == USER) {
+                    if ([ConditionSetup sharedInstance].reader == USER && [ConditionSetup sharedInstance].nativeLanguage==ENGLISH ) {
                         audio = @"IntroDyadReads_R";
                     } else {
-                        audio = @"IntroIpadReads_R";
+                        audio = @"IntroIpadReads_R_S";
                     }
                 }
                 

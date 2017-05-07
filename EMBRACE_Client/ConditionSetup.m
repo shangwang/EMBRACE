@@ -26,7 +26,8 @@
 @synthesize isOnDemandVocabEnabled;
 @synthesize isBackButtonEnabled;
 @synthesize isSpeakerButtonEnabled;
-
+@synthesize nativeLanguage;
+@synthesize targetLanguage;
 @synthesize allowFileSync;
 
 static ConditionSetup *sharedInstance = nil;
@@ -46,19 +47,25 @@ static ConditionSetup *sharedInstance = nil;
 - (id)init {
     if (self = [super init]) {
         condition = EMBRACE;
-       // language = BILINGUAL;
-        language = ENGLISH;
+        language = BILINGUAL;
+       // language = ENGLISH;
+        //targetLanguage
+        //baseLanguage
+        //languageMode = ??(just native lang) and BILINGUAL (uses native langauge and target lang)
         reader = SYSTEM;
         appMode = Study;
         currentMode = PM_MODE;
-
+        nativeLanguage=SPANISH;
+        targetLanguage=SPANISH;
         newInstructions = NO;
         isVocabPageEnabled = NO;
-        isAssessmentPageEnabled = YES;
+        //disable assesement for study
+        isAssessmentPageEnabled = NO;
         assessmentMode = ENDOFCHAPTER;
         isOnDemandVocabEnabled = YES;
         
-        isAutomaticAnimationEnabled = YES;
+        //turned off for the study.
+        isAutomaticAnimationEnabled = NO;
         animatedStepCompletionMode = PERSTEP;
         
         isBackButtonEnabled = NO;
